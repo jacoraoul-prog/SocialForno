@@ -1,0 +1,35 @@
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Outfit", ui-sans-serif, system-ui, sans-serif;
+  --font-display: "Fraunces", Georgia, "Times New Roman", serif;
+  --color-cream: #f5f0e8;
+  --color-cream-deep: #e8e0d2;
+  --color-paper: #fffcf7;
+  --color-ink: #1a1a1a;
+  --color-flame: #ff6b35;
+  --color-flame-deep: #e4572a;
+}
+
+@layer base {
+  html {
+    background: var(--color-cream);
+  }
+
+  body {
+    background: var(--color-cream);
+    color: var(--color-ink);
+    font-family: var(--font-sans);
+    line-height: 1.5;
+    min-height: 100dvh;
+  }
+
+  button:not(:disabled),
+  [role="button"]:not(:disabled) {
+    cursor: pointer;
+  }
+
+  .frame-square { aspect-ratio: 1 / 1; }
+  .frame-story { aspect-ratio: 9 / 16; }
+  .frame-wide { aspect-ratio: 16 / 9; }
+}
